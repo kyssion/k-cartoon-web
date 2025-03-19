@@ -6,7 +6,7 @@ import { ElMenu, ElMenuItem, ElButton, ElHeader, ElMain } from "element-plus";
   <div>
     <ElHeader>
       <div class="header-container">
-        <div class="left-nav">
+        <div class="left-info">
           <div class="header-left-info">
             <img
               src="https://cartoom.shanlinyouqing.online/logo.png"
@@ -24,11 +24,11 @@ import { ElMenu, ElMenuItem, ElButton, ElHeader, ElMain } from "element-plus";
               alt="User Avatar"
               class="user-avatar"
             />
-            <span class="user-name">User Name</span>
+            <span class="user-name" style="font-weight: bold">User Name</span>
           </div>
           <div class="points-info">
-            <span class="points-balance">积分余额: 1000</span>
-            <ElButton type="primary">积分充值</ElButton>
+            <span class="points-balance" style="font-weight: bold">积分余额: 1000</span>
+            <ElButton type="primary" style="font-weight: bold">积分充值</ElButton>
           </div>
         </div>
       </div>
@@ -38,11 +38,11 @@ import { ElMenu, ElMenuItem, ElButton, ElHeader, ElMain } from "element-plus";
 <style scoped>
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0 20px;
 }
-.left-nav {
+.left-info {
   margin-left: 20px;
 }
 .right-info {
