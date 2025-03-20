@@ -1,44 +1,50 @@
 <script setup>
-import { ElCarousel, ElCarouselItem } from 'element-plus'
+import { ElCarousel, ElCarouselItem } from "element-plus";
+import { ref } from "vue";
 
 defineProps({
   images: {
     type: Array,
     required: true,
     validator: (value) => {
-      return value.every(item => 
-        'url' in item && 'title' in item && 'value' in item
-      )
-    }
-  }
-})
+      return value.every(
+        (item) => "url" in item && "title" in item && "value" in item
+      );
+    },
+  },
+});
 
-const activeIndex = ref(0)
-const hoverIndex = ref(-1)
+const activeIndex = ref(0);
+const hoverIndex = ref(-1);
 </script>
 
 <template>
-  <ElCarousel 
+<div>
+  <div class="header-title" style="text-align: center; margin: 20px 0; font-size: 1rem;">原创动漫人物</div>
+  <ElCarousel
     :interval="5000"
     indicator-position="outside"
-    @change="(index) => activeIndex = index"
+    @change="(index) => (activeIndex = index)"
     class="carousel-container"
+    :autoplay="true"
   >
-    <ElCarouselItem 
+    <ElCarouselItem
       v-for="(chunk, index) in Math.ceil(images.length / 4)"
       :key="index"
       class="carousel-item"
     >
       <div class="grid-container">
-        <div 
+        <div
           v-for="(img, i) in images.slice(index * 4, (index + 1) * 4)"
           :key="img.url"
           class="image-wrapper"
           @mouseenter="hoverIndex = index * 4 + i"
           @mouseleave="hoverIndex = -1"
+          @touchstart.passive="hoverIndex = index * 4 + i"
+          @touchend="hoverIndex = -1"
         >
           <img :src="img.url" class="carousel-image" />
-          <div 
+          <div
             class="mask"
             :class="{ 'mask-visible': hoverIndex === index * 4 + i }"
           >
@@ -51,6 +57,7 @@ const hoverIndex = ref(-1)
       </div>
     </ElCarouselItem>
   </ElCarousel>
+</div>
 </template>
 
 <style scoped>
@@ -82,19 +89,27 @@ const hoverIndex = ref(-1)
 
 .mask {
   position: absolute;
-  bottom: -100%;
+  bottom: -40%;
   left: 0;
   right: 0;
-  height: 100%;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  height: 40%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
   display: flex;
   align-items: flex-end;
   padding: 20px;
   transition: bottom 0.3s ease-out;
+  z-index: 10;
+}
+
+.mask-content {
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 8px;
+  transition: bottom 0.3s ease-out;
 }
 
 .mask-visible {
-  bottom: 0;
+  bottom: 0 !important;
 }
 
 .mask-content {
@@ -108,7 +123,17 @@ const hoverIndex = ref(-1)
 }
 
 .description {
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: normal;
+  overflow: visible;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.mask-content {
+  z-index: 2;
+  width: 100%;
 }
 </style>

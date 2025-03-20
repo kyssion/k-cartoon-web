@@ -3,37 +3,37 @@ import { ElMenu, ElMenuItem, ElButton, ElHeader, ElMain } from "element-plus";
 </script>
 
 <template>
-  <div>
-    <ElHeader>
-      <div class="header-container">
-        <div class="left-info">
-          <div class="header-left-info">
-            <img
-              src="https://cartoom.shanlinyouqing.online/logo.png"
-              alt="Company Logo"
-              class="logo"
-              style="width: 40px; height: 40px; margin-right: 10px"
-            />
-            <span class="company-name" style="font-weight: bold">山林又青</span>
-          </div>
-        </div>
-        <div class="right-info">
-          <div class="user-info">
-            <img
-              src="https://cartoom.shanlinyouqing.online/acfun.png"
-              alt="User Avatar"
-              class="user-avatar"
-            />
-            <span class="user-name" style="font-weight: bold">User Name</span>
-          </div>
-          <div class="points-info">
-            <span class="points-balance" style="font-weight: bold">积分余额: 1000</span>
-            <ElButton type="primary" style="font-weight: bold">积分充值</ElButton>
-          </div>
-        </div>
+<div>
+  <div class="header-container">
+    <div class="left-info">
+      <div class="header-left-info">
+        <img
+          src="https://cartoom.shanlinyouqing.online/logo.png"
+          alt="Company Logo"
+          class="logo"
+          style="width: 40px; height: 40px; margin-right: 10px"
+        />
+        <span class="company-name" style="font-weight: bold">山林又青</span>
       </div>
-    </ElHeader>
+    </div>
+    <div class="right-info">
+      <div class="user-info">
+        <img
+          src="https://cartoom.shanlinyouqing.online/acfun.png"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+        <span class="user-name" style="font-weight: bold">User Name</span>
+      </div>
+      <div class="points-info">
+        <span class="points-balance" style="font-weight: bold"
+          >积分余额: 1000</span
+        >
+        <ElButton type="primary" style="font-weight: bold">积分充值</ElButton>
+      </div>
+    </div>
   </div>
+</div>
 </template>
 <style scoped>
 .header-container {
@@ -41,6 +41,7 @@ import { ElMenu, ElMenuItem, ElButton, ElHeader, ElMain } from "element-plus";
   justify-content: space-around;
   align-items: center;
   padding: 0 20px;
+  margin: 20px 0;
 }
 .left-info {
   margin-left: 20px;
