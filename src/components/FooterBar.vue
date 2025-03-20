@@ -1,29 +1,32 @@
 <script setup>
-import { ElFooter } from 'element-plus'
+import { ElFooter } from "element-plus";
 </script>
 
 <template>
-  <div class="app-footer">
-    <div class="footer-content">
-      <div class="footer-row">
-        <span>互联网 ICP 备案：津ICP备2024023775号-1</span>
-        <div class="divider"></div>
-        <span>公安备案号 津公网安备12011602300276号</span>
-        <div class="divider"></div>
-        <span>营业执照</span>
-      </div>
-      <div class="footer-row">
-        <span>12345 政务服务便民热线</span>
-        <div class="divider"></div>
-        <span>全国文化和旅游市场网上举报投诉处理系统</span>
-      </div>
-      <div class="footer-row">
-        <span>联系邮箱：shanlinyouqing@yeah.net</span>
-        <div class="divider"></div>
-        <span>联系地址：天津市滨海新区杭州道街道河北路 3-1516号商务楼中406、407室</span>
-      </div>
-      <div class="copyright">
-        © 2024 山林又青 版权所有
+  <div>
+    <div class="app-footer">
+      <div class="footer-content">
+        <div class="footer-row">
+          <span>互联网 ICP 备案：津ICP备2024023775号-1</span>
+          <div class="divider"></div>
+          <span>公安备案号 津公网安备12011602300276号</span>
+          <div class="divider"></div>
+          <span>营业执照</span>
+        </div>
+        <div class="footer-row">
+          <span>12345 政务服务便民热线</span>
+          <div class="divider"></div>
+          <span>全国文化和旅游市场网上举报投诉处理系统</span>
+        </div>
+        <div class="footer-row">
+          <span>联系邮箱：shanlinyouqing@yeah.net</span>
+          <div class="divider"></div>
+          <span
+            >联系地址：天津市滨海新区杭州道街道河北路
+            3-1516号商务楼中406、407室</span
+          >
+        </div>
+        <div class="copyright">© 2024 山林又青 版权所有</div>
       </div>
     </div>
   </div>

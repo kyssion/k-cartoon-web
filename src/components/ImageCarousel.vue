@@ -19,14 +19,11 @@ const hoverIndex = ref(-1);
 </script>
 
 <template>
-<div>
-  <div class="header-title" style="text-align: center; margin: 20px 0; font-size: 1rem;">原创动漫人物</div>
   <ElCarousel
     :interval="5000"
     indicator-position="outside"
     @change="(index) => (activeIndex = index)"
     class="carousel-container"
-    :autoplay="true"
   >
     <ElCarouselItem
       v-for="(chunk, index) in Math.ceil(images.length / 4)"
@@ -57,7 +54,6 @@ const hoverIndex = ref(-1);
       </div>
     </ElCarouselItem>
   </ElCarousel>
-</div>
 </template>
 
 <style scoped>

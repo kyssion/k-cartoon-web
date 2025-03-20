@@ -13,7 +13,7 @@ import { ElMenu, ElMenuItem, ElButton, ElHeader, ElMain } from "element-plus";
           class="logo"
           style="width: 40px; height: 40px; margin-right: 10px"
         />
-        <span class="company-name" style="font-weight: bold">山林又青</span>
+        <span class="company-name" style="font-weight: bold">山林又青漫画</span>
       </div>
     </div>
     <div class="right-info">
@@ -23,10 +23,11 @@ import { ElMenu, ElMenuItem, ElButton, ElHeader, ElMain } from "element-plus";
           alt="User Avatar"
           class="user-avatar"
         />
-        <span class="user-name" style="font-weight: bold">User Name</span>
+        <span class="user-name" style="font-weight: bold">一个测试账号</span>
       </div>
       <div class="points-info">
-        <span class="points-balance" style="font-weight: bold"
+        <img src="https://cartoom.shanlinyouqing.online/%E9%87%91%E5%B8%81.png" alt="https://cartoom.shanlinyouqing.online/%E9%87%91%E5%B8%81.png" style="width: 30px;">
+        <span class="points-balance" style="font-weight: bold; margin-left: 15px;"
           >积分余额: 1000</span
         >
         <ElButton type="primary" style="font-weight: bold">积分充值</ElButton>
