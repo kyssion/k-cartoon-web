@@ -51,8 +51,8 @@ export default {
   display: flex;
   padding: 16px;
   border-bottom: 1px solid #dad8d8;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 30rem;
+  margin-right: 30rem;
 }
 
 .card-image {

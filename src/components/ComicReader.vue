@@ -10,6 +10,7 @@ export default {
     return {
       imageInfo:
         "https://cdnvc.brmgo.cn/aigc/cf-outputs/7305221076091346946/7305221076091346945/7305221449732521998_cQpv_lo0_0.jpg",
+      comicTitleData: "漫画标题打发手动阀沙发沙发沙发沙发沙发飒飒打撒sdfsdf", // 漫画标题
     };
   },
 };
@@ -25,13 +26,13 @@ export default {
         <img class="comic-image" :src="imageInfo" alt="漫画内容" />
       </div>
       <div class="dialog-container">
-        <div class="typing-text">{{ comicTitle }}</div>
+        <div class="typing-text">{{ comicTitleData }}</div>
       </div>
       <button
         class="nav-pre-btn prev-btn"
         @click="
-          imageInfo =
-            'https://cdnvc.brmgo.cn/aigc/cf-outputs/7305221076091346946/7305221076091346945/7305221449732521998_MEVC_lo0_0.jpg'
+          imageInfo = 'https://cdnvc.brmgo.cn/aigc/cf-outputs/7305221076091346946/7305221076091346945/7305221449732521998_MEVC_lo0_0.jpg';
+          comicTitleData = '王老吉的饿饿飞机减肥减肥减肥减肥减肥减肥减肥'
         "
       >
         上一话
@@ -39,8 +40,8 @@ export default {
       <button
         class="nav-next-btn next-btn"
         @click="
-          imageInfo =
-            'https://cdnvc.brmgo.cn/aigc/cf-outputs/7305221076091346946/7305221076091346945/7305221449732521998_RpPm_lo0_0.jpg'
+          imageInfo = 'https://cdnvc.brmgo.cn/aigc/cf-outputs/7305221076091346946/7305221076091346945/7305221449732521998_RpPm_lo0_0.jpg';
+          comicTitleData = '山东的的叠加覅欸i娥姐季风季节欸发巨额罚金方法'
         "
       >
         下一话
