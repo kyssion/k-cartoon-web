@@ -11,6 +11,9 @@ export default {
       imageInfo:
         "https://cdnvc.brmgo.cn/aigc/cf-outputs/7305221076091346946/7305221076091346945/7305221449732521998_cQpv_lo0_0.jpg",
       comicTitleData: "漫画标题打发手动阀沙发沙发沙发沙发沙发飒飒打撒sdfsdf", // 漫画标题
+      progress: 10,
+    currentPage: 1, // 新增当前页码
+    totalPages: 10  // 新增总页码
     };
   },
 };
@@ -18,6 +21,11 @@ export default {
 
 <template>
   <div class="base-background">
+     <!-- 添加进度栏 -->
+     <div class="progress-container">
+      <div class="progress-bar" :style="{ width: progress + '%' }"></div>
+      <div class="page-indicator">{{ currentPage }} / {{ totalPages }}</div>
+    </div>
     <div
       class="comic-container"
       :style="{ backgroundImage: `url(${imageInfo})` }"
@@ -221,5 +229,38 @@ export default {
   margin: 0;
   font-size: 1.8rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* 进度栏容器样式 */
+.progress-container {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* 进度条样式 */
+.progress-bar {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+.page-indicator {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 </style>

@@ -96,6 +96,7 @@ export default {
   font-size: 14px;
   color: #999;
   height: 130px;
+  overflow: hidden;
 }
 
 .card-buttons {
